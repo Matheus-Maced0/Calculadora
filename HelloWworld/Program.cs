@@ -30,7 +30,7 @@ namespace HelloWorld
             }
             else
             {
-                Console.WriteLine("Valor invalido, por vaor digite uma valor valido(1,2,3 ou 4)");
+                Console.WriteLine("Valor invalido, digite uma valor valido(1,2,3 ou 4)");
                 goto inicio;
             }
 
