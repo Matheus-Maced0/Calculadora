@@ -8,25 +8,26 @@ namespace HelloWorld
 {
     internal class Program
     {
+        enum Opcao { Soma = 1, Subtração, Multiplicação, Divisão }
         static void Main(string[] args)
         {
             inicio:
             Console.WriteLine("Digite qual operação você deseja realizar:\n1- Soma\n2- Subtração\n3_ Multiplicação\n4- Divisão");
-            char escolha = char.Parse(Console.ReadLine());
-
+            int index = int.Parse(Console.ReadLine());
+            Opcao escolha = (Opcao)index;
 
             switch (escolha)
             {
-                case '1':
+                case Opcao.Soma:
                     Soma();
                    break;
-                case '2':
+                case Opcao.Subtração:
                     Subitracao();
                     break;
-                case '3':
+                case Opcao.Multiplicação:
                     Multiplicacao();
                     break;
-                case '4':
+                case Opcao.Divisão:
                     Divisao();
                     break;
                 default:
