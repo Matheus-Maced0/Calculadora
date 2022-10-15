@@ -14,7 +14,29 @@ namespace HelloWorld
             Console.WriteLine("Digite qual operação você deseja realizar:\n1- Soma\n2- Subtração\n3_ Multiplicação\n4- Divisão");
             char escolha = char.Parse(Console.ReadLine());
 
-            if(escolha == '1')
+
+            switch (escolha)
+            {
+                case '1':
+                    Soma();
+                   break;
+                case '2':
+                    Subitracao();
+                    break;
+                case '3':
+                    Multiplicacao();
+                    break;
+                case '4':
+                    Divisao();
+                    break;
+                default:
+                    Console.WriteLine("Valor invalido, digite uma valor valido(1,2,3 ou 4)");
+                    goto inicio;
+                    break;
+
+            }
+
+            /*if(escolha == '1')
             {
                 Soma();
 
@@ -34,7 +56,7 @@ namespace HelloWorld
                 goto inicio;
             }
 
-
+            */
 
             Console.ReadLine();
 
